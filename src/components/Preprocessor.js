@@ -224,8 +224,9 @@ class Preprocessor {
             enforce: true,
             type: 'css/mini-extract'
         };
+        const path = File.stripPublicDir(output.relativePathWithoutExtension());
 
-        this.chunks.add(name, output.normalizedOutputPath(), tests, attrs);
+        this.chunks.add(name, path, tests, attrs);
     }
 }
 
